@@ -1,24 +1,8 @@
 import unittest
 class TestCase(unittest.TestCase):
 	def setUp(self):
-		self.input_value = {
-							  'hired': {
-							    'be': {
-							      'to': {
-							        'deserve': 'I'
-							      }
-							    }
-							  }
-							}
-		self.output_value = {
-							  'I': {
-							    'deserve': {
-							      'to': {
-							         'be': 'hired'
-							      }
-							    }
-							  }
-							}
+		self.input_value = {'hired': {'be': {'to': {'deserve': 'I'}}}}
+		self.output_value = {'I': {'deserve': {'to': {'be': 'hired'}}}}
 	def test_nested_reverse(self):
 		self.assertEqual(nested_reverse(self.input_value),self.output_value)
 	def test_is_dict(self):
@@ -50,4 +34,3 @@ def nested_reverse(mylist, result={}):
 
 if __name__ == '__main__':
     unittest.main()
-    
